@@ -2,15 +2,26 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Home page{% endblock %}</title>
+        <title>Me</title>
         <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
         {% block stylesheets %}
         {% endblock %}
         <style>
+            /* Style pour la page */
             body {
                 background-color: #012b36;
                 color: white;
             }
+
+            /* Limiter la taille des images */
+            img {
+                max-width: 100%; /* Pour la responsivité */
+                height: auto;    /* Conserver les proportions */
+                max-height: 200px; /* Limite la hauteur */
+                object-fit: cover; /* Centre l'image dans son espace */
+            }
+
+            /* Style pour le footer */
             footer {
                 text-align: center;
                 padding: 1rem;
@@ -23,10 +34,10 @@
         </style>
     </head>
     <body>
-        <!-- Navbar -->
+        <!-- Barre de navigation -->
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">My website</a>
+                <a class="navbar-brand" href="#">my website</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -40,18 +51,28 @@
             </div>
         </nav>
 
-        <!-- Informations personnelles -->
+        <!-- Contenu principal -->
         <div class="container my-5">
-            <h1>Fauritte Martin</h1>
-            <h3>Group: B1</h3>
-            <p>Welcome to my personal page. I'm passionate about computers and astronomy and always curious to learn new things.</p>
-        </div>
+            <h1 class="text-center mb-4">my hobbies</h1>
+            <div class="row g-4">
+                <!-- Image 1 -->
+                <div class="col-12 col-sm-6 col-md-4 text-center">
+                    <img src="{{ asset('astro.jpg') }}" alt="Loisir 1" class="img-fluid rounded shadow">
+                    <p>I love astronomy, i was a member of a club in cournon d'auvergne</p>
+                </div>
+                <!-- Image 2 -->
+                <div class="col-12 col-sm-6 col-md-4 text-center">
+                    <img src="{{ asset('ramstein.jpg') }}" alt="Loisir 2" class="img-fluid rounded shadow">
+                    <p>i am a big fan of metal last year i went to the ramstein</p>
+                </div>
+                <!-- Image 3 -->
+                <div class="col-12 col-sm-6 col-md-4 text-center">
+                    <img src="{{ asset('steam.jpg') }}" alt="Loisir 3" class="img-fluid rounded shadow">
+                    <p>here is a link to my profile</p>
+                    <a href="https://steamcommunity.com/profiles/76561199029945045/">link to my steam acount</a>
 
-        <!-- Section "Pour en savoir plus" -->
-        <div class="container bg-secondary text-white p-4 rounded">
-            <h2>Find out more</h2>
-            <p>Discover my hobbies, passions, desires and projects.</p>
-            <a class="btn btn-light" href="/photos">see more</a>
+                </div>
+            </div>
         </div>
 
         <!-- Footer -->
@@ -60,5 +81,3 @@
         </footer>
     </body>
 </html>
-
-

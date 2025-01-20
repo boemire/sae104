@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Home page{% endblock %}</title>
+        <title>Mon CV</title>
         <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
         {% block stylesheets %}
         {% endblock %}
@@ -23,35 +23,47 @@
         </style>
     </head>
     <body>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">My website</a>
+                <a class="navbar-brand" href="#">Mon Site</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link active" href="/fauritte">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/fauritte">Accueil</a></li>
                         <li class="nav-item"><a class="nav-link" href="/cv">CV</a></li>
                         <li class="nav-item"><a class="nav-link" href="/portfolio">E-Portfolio</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-
-        <!-- Informations personnelles -->
         <div class="container my-5">
-            <h1>Fauritte Martin</h1>
-            <h3>Group: B1</h3>
-            <p>Welcome to my personal page. I'm passionate about computers and astronomy and always curious to learn new things.</p>
-        </div>
+            <h1>Réseaux et télécommunications - Mon poste de rêve</h1>
 
-        <!-- Section "Pour en savoir plus" -->
-        <div class="container bg-secondary text-white p-4 rounded">
-            <h2>Find out more</h2>
-            <p>Discover my hobbies, passions, desires and projects.</p>
-            <a class="btn btn-light" href="/photos">see more</a>
+            <section>
+                <h2>Formations</h2>
+                <ul>
+                    <li>[Formation 1]</li>
+                    <li>[Formation 2]</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Expériences Professionnelles</h2>
+                <ul>
+                    <li>[Expérience 1]</li>
+                    <li>[Expérience 2]</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Compétences</h2>
+                <ul>
+                    <li>[Compétence 1]</li>
+                    <li>[Compétence 2]</li>
+                </ul>
+            </section>
         </div>
 
         <!-- Footer -->
@@ -60,5 +72,3 @@
         </footer>
     </body>
 </html>
-
-

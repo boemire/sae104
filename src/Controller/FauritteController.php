@@ -15,10 +15,27 @@ class FauritteController extends AbstractController
             'controller_name' => 'FauritteController',
         ]);
     }
-    #[Route('/fauritte2', name: 'app_fauritte2')]
-    public function index2(): Response
+
+    #[Route('/photos', name: 'app_photos')]
+    public function photos(): Response
     {
-        return $this->render('fauritte/index2.html.twig', [
+        return $this->render('fauritte/photos.html.twig', [
+            'controller_name' => 'FauritteController',
+        ]);
+    }
+
+    #[Route('/cv', name: 'app_cv')]
+    public function cv(): Response
+    {
+        return $this->render('fauritte/cv.html.twig', [
+            'controller_name' => 'FauritteController',
+        ]);
+    }
+
+    #[Route('/portfolio', name: 'app_portfolio')]
+    public function portfolios(): Response
+    {
+        return $this->render('fauritte/portfolio.html.twig', [
             'controller_name' => 'FauritteController',
         ]);
     }
