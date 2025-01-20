@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Mes Photos</title>
+        <title>Mon portfolio</title>
         <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
         {% block stylesheets %}
         {% endblock %}
@@ -19,6 +19,21 @@
                 position: fixed;
                 bottom: 0;
                 width: 100%;
+            }
+            .custom-section {
+                margin-top: 50px;
+                margin-bottom: 50px;
+            }
+            .custom-section h2 {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            .custom-card {
+                background-color: #dae1e7;
+                color: #000;
+                padding: 20px;
+                border-radius: 10px;
+                text-align: center;
             }
         </style>
     </head>
@@ -39,20 +54,34 @@
             </div>
         </nav>
 
-        <div class="container my-5">
-            <h1>E-portfolio</h1>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="photo1.jpg" class="img-fluid rounded" alt="Photo 1">
-                    <p>Loisir 1</p>
-                </div>
-                <div class="col-md-4">
-                    <img src="photo2.jpg" class="img-fluid rounded" alt="Photo 2">
-                    <p>Loisir 2</p>
-                </div>
-                <div class="col-md-4">
-                    <img src="photo3.jpg" class="img-fluid rounded" alt="Photo 3">
-                    <p>Loisir 3</p>
+            <!-- New Section -->
+            <div class="custom-section">
+                <h2>Domaines de compétences</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="custom-card">
+                            <h3>Administrer les réseaux et l'internet</h3>
+                            <p>
+                                Superviser et configurer les infrastructures réseau pour assurer une connectivité stable et sécurisée.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="custom-card">
+                            <h3>Connecter les entreprises et les usagers</h3>
+                            <p>
+                                Fournir des solutions innovantes pour connecter efficacement les utilisateurs et les services en ligne.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="custom-card">
+                            <h3>Créer des outils et applications informatiques</h3>
+                            <p>
+                                Concevoir et développer des applications pour répondre aux besoins spécifiques en réseaux et télécommunications.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,3 +92,4 @@
         </footer>
     </body>
 </html>
+

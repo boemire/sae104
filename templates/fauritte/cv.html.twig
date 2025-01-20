@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Mon CV</title>
         <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
-        {% block stylesheets %}
-        {% endblock %}
         <style>
             body {
                 background-color: #012b36;
-                color: white;
+                color: black;
+                padding-bottom: 80px;
             }
+            
             footer {
                 text-align: center;
                 padding: 1rem;
@@ -20,10 +21,59 @@
                 bottom: 0;
                 width: 100%;
             }
+
+            .cv-section {
+                margin-bottom: 2rem;
+            }
+
+            .cv-section h2 {
+                color: black;
+                border-bottom: 2px solid #b58900;
+                padding-bottom: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .cv-header {
+                margin-bottom: 3rem;
+                text-align: center;
+                color: white;
+            }
+
+            .cv-header a {
+                color: white;
+            }
+
+            .job-title {
+                color: black;
+                font-weight: bold;
+            }
+
+            .date {
+                color: black;
+                font-style: italic;
+            }
+
+            .card {
+                background-color: #dae1e7 !important;  /* Gris clair légèrement bleuté */
+            }
+
+            .card-body {
+                color: black;
+            }
+
+            .card-body ul li {
+                color: black;
+            }
+
+            .card-body p {
+                color: black;
+            }
         </style>
     </head>
+    <!-- Le reste du code HTML reste identique -->
     <body>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Mon Site</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,44 +81,164 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarColor01">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link active" href="/fauritte">Accueil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/cv">CV</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/fauritte">Accueil</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/cv">CV</a></li>
                         <li class="nav-item"><a class="nav-link" href="/portfolio">E-Portfolio</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
+        <!-- CV Content -->
         <div class="container my-5">
-            <h1>Réseaux et télécommunications - Mon poste de rêve</h1>
+            <div class="cv-header">
+                <h1 class="display-4">Martin FAURITTE</h1>
+                <p class="lead">
+                    <a href="mailto:martin.fauritte@etu.univ-st-etienne.fr">
+                        martin.fauritte@etu.univ-st-etienne.fr
+                    </a>
+                </p>
+                <p>
+                    Recherche de poste en cybersécurité pour développer mes compétences dans ce domaine
+                </p>
+            </div>
 
-            <section>
-                <h2>Formations</h2>
-                <ul>
-                    <li>[Formation 1]</li>
-                    <li>[Formation 2]</li>
-                </ul>
-            </section>
+            <div class="cv-section">
+                <h2>FORMATION</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="job-title">BUT Réseaux et Télécommunications</h3>
+                        <p class="date">Université de Saint-Étienne - En cours - 1ère année</p>
+                        <ul>
+                            <li>Spécialisation en cours dans les réseaux et systèmes de communication</li>
+                            <li>Focus sur les technologies de l'information et de la communication</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="job-title">Baccalauréat Général</h3>
+                        <p>Formation générale avec développement de compétences analytiques et méthodologiques</p>
+                    </div>
+                </div>
+            </div>
 
-            <section>
-                <h2>Expériences Professionnelles</h2>
-                <ul>
-                    <li>[Expérience 1]</li>
-                    <li>[Expérience 2]</li>
-                </ul>
-            </section>
+            <div class="cv-section">
+                <h2>EXPÉRIENCE PROFESSIONNELLE</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="job-title">Assistant Administratif | ADERE</h3>
+                        <p class="date">Stage d'été - 2 mois</p>
+                        <ul>
+                            <li>Gestion de tâches administratives</li>
+                            <li>Support aux équipes en place</li>
+                            <li>Expérience en environnement professionnel</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="job-title">Bénévole | Association ACFA</h3>
+                        <p class="date">En cours</p>
+                        <ul>
+                            <li>Organisation et gestion logistique des événements sportifs</li>
+                            <li>Responsable du ravitaillement des coureurs</li>
+                            <li>Assistance avant, pendant et après les courses/trails</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3 class="job-title">Membre Actif | Le Chemin des Étoiles</h3>
+                        <p class="date">En cours</p>
+                        <ul>
+                            <li>Participation à l'organisation d'événements</li>
+                            <li>Contribution à la vie associative</li>
+                            <li>Développement de compétences en gestion événementielle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-            <section>
-                <h2>Compétences</h2>
-                <ul>
-                    <li>[Compétence 1]</li>
-                    <li>[Compétence 2]</li>
-                </ul>
-            </section>
+            <div class="cv-section">
+                <h2>COMPÉTENCES</h2>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="job-title">Compétences Techniques</h3>
+                                <ul>
+                                    <li>Maîtrise des outils informatiques</li>
+                                    <li>Connaissances en réseaux et télécommunications</li>
+                                    <li>Bases en cybersécurité (en développement)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="job-title">Compétences Linguistiques</h3>
+                                <ul>
+                                    <li>Français : Langue maternelle</li>
+                                    <li>Anglais : Courant</li>
+                                    <li>Espagnol : Notions</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="job-title">Compétences Personnelles</h3>
+                                <ul>
+                                    <li>Adaptabilité rapide</li>
+                                    <li>Amabilité et sens du contact</li>
+                                    <li>Autonomie dans le travail</li>
+                                    <li>Capacité à travailler en équipe</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h3 class="job-title">Compétences Professionnelles</h3>
+                                <ul>
+                                    <li>Gestion administrative</li>
+                                    <li>Organisation événementielle</li>
+                                    <li>Logistique</li>
+                                    <li>Support opérationnel</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cv-section">
+                <h2>OBJECTIF PROFESSIONNEL</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <p>Passionné par la cybersécurité, je cherche à développer mes compétences dans ce domaine en parallèle de ma formation. Je suis particulièrement intéressé par les opportunités permettant d'allier théorie et pratique pour renforcer mon expertise en sécurité informatique.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-
+        <!-- Download Button -->
+            <div class="download-btn d-flex justify-content-center align-items-center">
+                <a href="/cv.pdf" class="btn btn-success btn-lg" download>
+                    Télécharger mon CV
+                </a>
+            </div>
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 Mon Site. Tous droits réservés. Aucune copie autorisée.</p>
+            <p>&copy; 2025 Mon Site. Tous droits réservés.</p>
         </footer>
+
+        <!-- Bootstrap JavaScript Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>
