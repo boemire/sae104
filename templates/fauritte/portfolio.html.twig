@@ -47,6 +47,14 @@
                 margin: 30px auto;
                 text-align: center;
             }
+            /* Conteneur pour l'image avec une hauteur fixe */
+            .image-container {
+                width: 50%;
+                height: auto;
+                overflow: hidden;
+                border-radius: 0.25rem;
+                box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+            }
         </style>
     </head>
     <body>
@@ -119,6 +127,9 @@
                 <a href="https://docs.google.com/spreadsheets/d/1l6JO4G0v9GpYbKHrcXVuWhsBEEujKA7Oh-9oKB9Wm_w/edit?usp=drive_link" 
                    class="btn btn-success btn-lg" 
                    target="_blank">Voir le portfolio complet</a>
+            </div>
+            <div class="image-container">
+                    <img src="{{ asset('mooc.jpg') }}" alt="certification" class="img-fluid">
             </div>
         </div>
 
