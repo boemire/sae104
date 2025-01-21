@@ -68,9 +68,14 @@
             .card-body p {
                 color: black;
             }
+
+            .download-btn {
+                display: none;
+                text-align: center;
+                margin-top: 20px;
+            }
         </style>
     </head>
-    <!-- Le reste du code HTML reste identique -->
     <body>
         <!-- Navigation Bar -->
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
@@ -226,13 +231,35 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Download Button -->
-            <div class="download-btn d-flex justify-content-center align-items-center">
+
+            <!-- Formulaire d'information de l'utilisateur -->
+            <div class="cv-section">
+                <h2>Complétez vos informations pour télécharger mon CV</h2>
+                <form id="userForm">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">Prénom</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Nom</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Adresse e-mail</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Soumettre</button>
+                </form>
+            </div>
+
+            <!-- Download Button (hidden by default) -->
+            <div class="download-btn">
                 <a href="/cv.pdf" class="btn btn-success btn-lg" download>
                     Télécharger mon CV
                 </a>
             </div>
+        </div>
+
         <!-- Footer -->
         <footer>
             <p>&copy; 2025 Mon Site. Tous droits réservés.</p>
@@ -240,5 +267,21 @@
 
         <!-- Bootstrap JavaScript Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            // Fonction pour afficher le bouton de téléchargement lorsque le formulaire est soumis
+            document.getElementById("userForm").addEventListener("submit", function(event) {
+                event.preventDefault();  // Empêche la soumission du formulaire
+                const firstName = document.getElementById("firstName").value;
+                const lastName = document.getElementById("lastName").value;
+                const email = document.getElementById("email").value;
+
+                // Vérifie si tous les champs sont remplis
+                if (firstName && lastName && email) {
+                    // Affiche le bouton de téléchargement
+                    document.querySelector(".download-btn").style.display = "block";
+                }
+            });
+        </script>
     </body>
 </html>

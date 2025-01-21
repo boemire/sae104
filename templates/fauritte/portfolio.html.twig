@@ -2,14 +2,36 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Mon portfolio</title>
+        <title>Compétences R&T</title>
         <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
-        {% block stylesheets %}
-        {% endblock %}
         <style>
             body {
                 background-color: #012b36;
                 color: white;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 20px 0;
+                font-size: 16px;
+            }
+            th, td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: center;
+            }
+            th {
+                background-color: #343a40;
+                color: white;
+            }
+            tr:nth-child(even) {
+                background-color: #0a4f5a;
+            }
+            tr:hover {
+                background-color: #276d77;
+            }
+            .table-container {
+                margin: 30px;
             }
             footer {
                 text-align: center;
@@ -20,24 +42,15 @@
                 bottom: 0;
                 width: 100%;
             }
-            .custom-section {
-                margin-top: 50px;
-                margin-bottom: 50px;
-            }
-            .custom-section h2 {
-                margin-bottom: 30px;
-                text-align: center;
-            }
-            .custom-card {
-                background-color: #dae1e7;
-                color: #000;
-                padding: 20px;
-                border-radius: 10px;
+            .portfolio-btn {
+                display: block;
+                margin: 30px auto;
                 text-align: center;
             }
         </style>
     </head>
     <body>
+        <!-- Navbar -->
         <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Mon Site</a>
@@ -54,35 +67,58 @@
             </div>
         </nav>
 
-            <!-- New Section -->
-            <div class="custom-section">
-                <h2>Domaines de compétences</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="custom-card">
-                            <h3>Administrer les réseaux et l'internet</h3>
-                            <p>
-                                Superviser et configurer les infrastructures réseau pour assurer une connectivité stable et sécurisée.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="custom-card">
-                            <h3>Connecter les entreprises et les usagers</h3>
-                            <p>
-                                Fournir des solutions innovantes pour connecter efficacement les utilisateurs et les services en ligne.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="custom-card">
-                            <h3>Créer des outils et applications informatiques</h3>
-                            <p>
-                                Concevoir et développer des applications pour répondre aux besoins spécifiques en réseaux et télécommunications.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+        <!-- Main Content -->
+        <div class="container">
+            <h1 class="text-center my-4">Compétences R&T</h1>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Compétences</th>
+                            <th>Apprentissage critique</th>
+                            <th>Niveau d'acquisition</th>
+                            <th>Preuve</th>
+                            <th>Analyse réflexive</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RT1 - Administrer les réseaux et l'Internet</td>
+                            <td>AC11.01 Maîtriser les lois fondamentales de l'électricité et intervenir sur les équipements de réseaux</td>
+                            <td>1/4</td>
+                            <td><a href="AC11.01.docx" target="_blank">r113 r114</a></td>
+                            <td><a href="analyse1.docx" target="_blank">Analyse 1</a></td>
+                        </tr>
+                        <tr>
+                            <td>RT1 - Administrer les réseaux et l'Internet</td>
+                            <td>AC11.02 Comprendre l'architecture des systèmes numériques</td>
+                            <td>2/4</td>
+                            <td><a href="AC11.02.docx" target="_blank">r102</a></td>
+                            <td><a href="analyse2.docx" target="_blank">Analyse 2</a></td>
+                        </tr>
+                        <tr>
+                            <td>RT2 - Connecter les entreprises et les usagers</td>
+                            <td>AC12.01 Caractériser des systèmes de transmissions élémentaires</td>
+                            <td>4/4</td>
+                            <td><a href="AC12.01.docx" target="_blank">r114</a></td>
+                            <td><a href="analyse7.docx" target="_blank">Analyse 7</a></td>
+                        </tr>
+                        <tr>
+                            <td>RT3 - Créer des outils et applications informatiques pour les R&T</td>
+                            <td>AC13.06 S’intégrer dans un environnement collaboratif</td>
+                            <td>4/4</td>
+                            <td><a href="AC13.06.docx" target="_blank">r107</a></td>
+                            <td><a href="analyse17.docx" target="_blank">Analyse 17</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Button to full portfolio -->
+            <div class="portfolio-btn">
+                <a href="https://docs.google.com/spreadsheets/d/1l6JO4G0v9GpYbKHrcXVuWhsBEEujKA7Oh-9oKB9Wm_w/edit?usp=drive_link" 
+                   class="btn btn-success btn-lg" 
+                   target="_blank">Voir le portfolio complet</a>
             </div>
         </div>
 
